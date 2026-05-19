@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://7hlhkb88kpxh"]
+
+[ext_resource type="PackedScene" uid="uid://qxg2yqw0cdqt" path="res://Escenas/Player/nave_player.tscn" id="1_eeofm"]
+[ext_resource type="Texture2D" uid="uid://5isycfa3ebhg" path="res://Texturas/EstrellasFondo.png" id="1_pox43"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pox43"]
+size = Vector2(221, 2103.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g5kkq"]
+size = Vector2(221, 3950.75)
+
+[node name="ASSteroids(Game)" type="Node2D" unique_id=243724691]
+metadata/_edit_vertical_guides_ = [-1865.0, 1865.0]
+metadata/_edit_horizontal_guides_ = [1048.0, -1049.0]
+
+[node name="FondoEstrellado" type="Sprite2D" parent="." unique_id=1276062371]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(2.914236, 2.914236)
+texture = ExtResource("1_pox43")
+
+[node name="NavePlayer" parent="." unique_id=1541522294 instance=ExtResource("1_eeofm")]
+
+[node name="BulletsContainer" type="Node2D" parent="." unique_id=1877313993]
+
+[node name="BorderlandsWalls" type="Node2D" parent="." unique_id=1625837732]
+
+[node name="Area2D" type="StaticBody2D" parent="BorderlandsWalls" unique_id=1204340425]
+position = Vector2(-1975, -3)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderlandsWalls/Area2D" unique_id=763933096]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_pox43")
+
+[node name="Area2D4" type="StaticBody2D" parent="BorderlandsWalls" unique_id=1183215225]
+position = Vector2(-1974, -3)
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderlandsWalls/Area2D4" unique_id=693098383]
+position = Vector2(3949, 0)
+shape = SubResource("RectangleShape2D_pox43")
+
+[node name="Area2D2" type="StaticBody2D" parent="BorderlandsWalls" unique_id=384767735]
+position = Vector2(-1973, -4)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderlandsWalls/Area2D2" unique_id=849350909]
+position = Vector2(1918, -1155)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g5kkq")
+
+[node name="Area2D3" type="StaticBody2D" parent="BorderlandsWalls" unique_id=586601851]
+position = Vector2(-1975, -5)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderlandsWalls/Area2D3" unique_id=155060126]
+position = Vector2(1995, 1164)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g5kkq")

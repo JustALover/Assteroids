@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://namjd6pboaw5"]
+
+[ext_resource type="Texture2D" uid="uid://cepc1dibvquvh" path="res://Texturas/meteorito.png" id="1_7g33x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qrjc0"]
+radius = 76.00658
+
+[node name="MeteoritoBlanco" type="Area2D" unique_id=430204726]
+
+[node name="MeteoritoBlancoSprite" type="Sprite2D" parent="." unique_id=1635055545]
+scale = Vector2(0.342535, 0.342535)
+texture = ExtResource("1_7g33x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=797355056]
+position = Vector2(11, 1)
+rotation = 0.4660029
+shape = SubResource("CircleShape2D_qrjc0")

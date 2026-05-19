@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://br3tpm36r2qde"]
+
+[ext_resource type="Texture2D" uid="uid://bv34u7up14b58" path="res://Texturas/Meteorito gris.png" id="1_03ys6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_visty"]
+radius = 111.0
+
+[node name="MeteoritoGris" type="Area2D" unique_id=1710993935]
+
+[node name="MeteoritoGrisSprite" type="Sprite2D" parent="." unique_id=979805376]
+scale = Vector2(0.51597226, 0.51597226)
+texture = ExtResource("1_03ys6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1352054282]
+shape = SubResource("CircleShape2D_visty")

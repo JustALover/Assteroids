@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://qxg2yqw0cdqt"]
+
+[ext_resource type="Script" uid="uid://b2ynjpdsm023g" path="res://Escenas/Player/nave_player.gd" id="1_m4jb0"]
+[ext_resource type="Texture2D" uid="uid://lpbfmgbg53bb" path="res://Texturas/Milano.png" id="2_xq14b"]
+
+[node name="NavePlayer" type="CharacterBody2D" unique_id=1888815319]
+script = ExtResource("1_m4jb0")
+
+[node name="NaveSprite" type="Sprite2D" parent="." unique_id=920084363]
+texture = ExtResource("2_xq14b")
+
+[node name="CollisionShapeNave" type="CollisionPolygon2D" parent="." unique_id=209564657]
+polygon = PackedVector2Array(-571, 307, -14, -345, 540, 302, -15, 114)
