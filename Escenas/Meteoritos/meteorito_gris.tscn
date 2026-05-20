@@ -5,7 +5,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_visty"]
 radius = 111.0
 
-[node name="MeteoritoGris" type="Area2D" unique_id=1710993935]
+[node name="MeteoritoGris" type="CharacterBody2D" unique_id=1923626568]
 
 [node name="MeteoritoGrisSprite" type="Sprite2D" parent="." unique_id=979805376]
 scale = Vector2(0.51597226, 0.51597226)

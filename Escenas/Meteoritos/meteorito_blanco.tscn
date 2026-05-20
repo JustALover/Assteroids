@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://namjd6pboaw5"]
 
 [ext_resource type="Texture2D" uid="uid://cepc1dibvquvh" path="res://Texturas/meteorito.png" id="1_7g33x"]
+[ext_resource type="Script" uid="uid://cpnbilxke3ke8" path="res://Escenas/Meteoritos/meteorito_blanco.gd" id="1_qrjc0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qrjc0"]
 radius = 76.00658
 
-[node name="MeteoritoBlanco" type="Area2D" unique_id=430204726]
+[node name="MeteoritoBlanco" type="CharacterBody2D" unique_id=1414485117]
+script = ExtResource("1_qrjc0")
 
 [node name="MeteoritoBlancoSprite" type="Sprite2D" parent="." unique_id=1635055545]
 scale = Vector2(0.342535, 0.342535)

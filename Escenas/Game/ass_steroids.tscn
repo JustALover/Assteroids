@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://qxg2yqw0cdqt" path="res://Escenas/Player/nave_player.tscn" id="1_eeofm"]
 [ext_resource type="Texture2D" uid="uid://5isycfa3ebhg" path="res://Texturas/EstrellasFondo.png" id="1_pox43"]
+[ext_resource type="PackedScene" uid="uid://dwqw87qwkvp1d" path="res://Escenas/Enemy Spawner/enemy_spawner.tscn" id="3_g5kkq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pox43"]
 size = Vector2(221, 2103.5)
@@ -62,3 +63,6 @@ collision_mask = 0
 position = Vector2(1995, 1164)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g5kkq")
+
+[node name="EnemySpawner" parent="." unique_id=1219074892 instance=ExtResource("3_g5kkq")]
+position = Vector2(115, -69)
