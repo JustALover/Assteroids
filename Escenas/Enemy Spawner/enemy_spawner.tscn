@@ -11,10 +11,12 @@ asteroid_grey = ExtResource("2_edqlm")
 asteroid_white = ExtResource("3_4cltd")
 
 [node name="Timer" type="Timer" parent="." unique_id=427960258]
+wait_time = 0.5
 autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1119362668]
-scale = Vector2(0.2109375, 0.2109375)
+position = Vector2(250.875, 0)
+scale = Vector2(4.845703, 1.0039063)
 texture = ExtResource("4_4cltd")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

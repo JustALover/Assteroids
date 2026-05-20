@@ -122,9 +122,12 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evitx"]
+size = Vector2(33, 23)
+
 [node name="NavePlayer" type="CharacterBody2D" unique_id=1888815319]
 collision_layer = 2
-collision_mask = 24
+collision_mask = 16
 script = ExtResource("1_m4jb0")
 bullet_scene = ExtResource("2_k17av")
 
@@ -169,5 +172,11 @@ polygon = PackedVector2Array(-504.30002, 249.4, -14.30008, -320.59995, 475.69986
 wait_time = 0.25
 one_shot = true
 autostart = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1981639779]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1520137218]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_evitx")
 
 [connection signal="timeout" from="ShootCooldown" to="." method="_on_shoot_cooldown_timeout"]

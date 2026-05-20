@@ -7,6 +7,8 @@
 radius = 76.00658
 
 [node name="MeteoritoBlanco" type="CharacterBody2D" unique_id=1414485117]
+collision_layer = 8
+collision_mask = 0
 script = ExtResource("1_qrjc0")
 
 [node name="MeteoritoBlancoSprite" type="Sprite2D" parent="." unique_id=1635055545]
@@ -17,3 +19,16 @@ texture = ExtResource("1_7g33x")
 position = Vector2(11, 1)
 rotation = 0.4660029
 shape = SubResource("CircleShape2D_qrjc0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=462589588]
+collision_layer = 8
+collision_mask = 6
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1494601561]
+polygon = PackedVector2Array(-8, 106, 83, 73, 101, -26, 90, -56, 92, -86, 27, -107, -13, -87, -42, -80, -98, 31, -71, 83)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1435653764]
+position = Vector2(-17, -24)
+rect = Rect2(-50, -52, 153, 170)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

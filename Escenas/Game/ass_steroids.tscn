@@ -25,6 +25,7 @@ texture = ExtResource("1_pox43")
 [node name="BulletsContainer" type="Node2D" parent="." unique_id=1877313993]
 
 [node name="BorderlandsWalls" type="Node2D" parent="." unique_id=1625837732]
+visible = false
 
 [node name="Area2D" type="StaticBody2D" parent="BorderlandsWalls" unique_id=1204340425]
 position = Vector2(-1975, -3)
@@ -64,5 +65,20 @@ position = Vector2(1995, 1164)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g5kkq")
 
-[node name="EnemySpawner" parent="." unique_id=1219074892 instance=ExtResource("3_g5kkq")]
-position = Vector2(115, -69)
+[node name="Node2D" type="Node2D" parent="." unique_id=1961967120]
+
+[node name="EnemySpawner" parent="Node2D" unique_id=1219074892 instance=ExtResource("3_g5kkq")]
+position = Vector2(1.0000005, -1479)
+rotation = -1.5760323
+
+[node name="EnemySpawner6" parent="Node2D" unique_id=663577117 instance=ExtResource("3_g5kkq")]
+position = Vector2(2, 1405)
+rotation = 1.5707964
+
+[node name="EnemySpawner7" parent="Node2D" unique_id=1675700921 instance=ExtResource("3_g5kkq")]
+position = Vector2(-2323, -11)
+rotation = 3.1415927
+
+[node name="EnemySpawner8" parent="Node2D" unique_id=919239296 instance=ExtResource("3_g5kkq")]
+position = Vector2(3576, 6)
+rotation = -3.1415927
