@@ -26,6 +26,10 @@ func shoot():
 	get_tree().current_scene.get_node("BulletsContainer").add_child(bullet)
 	
 	$ShootCooldown.start()
+	
+func die():
+	print("GAME OVER 💥")
+	get_tree().change_scene_to_file("res://Escenas/Pantalla de Muerte/youre_dead_menu.tscn")
 
 
 func _physics_process(delta):
@@ -74,4 +78,4 @@ func _on_shoot_cooldown_timeout() -> void:
 
 func _on_area_2d_area_entered(meteorito: Area2D) -> void:
 	if meteorito.is_in_group("asteroids"):
-		print("Moriste puta")
+		call_deferred("die")
