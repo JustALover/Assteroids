@@ -125,7 +125,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evitx"]
 size = Vector2(33, 23)
 
-[node name="NavePlayer" type="CharacterBody2D" unique_id=1888815319]
+[node name="NavePlayer" type="CharacterBody2D" unique_id=1888815319 groups=["player"]]
 collision_layer = 2
 collision_mask = 16
 script = ExtResource("1_m4jb0")

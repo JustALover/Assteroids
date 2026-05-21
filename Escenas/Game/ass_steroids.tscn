@@ -71,14 +71,46 @@ shape = SubResource("RectangleShape2D_g5kkq")
 position = Vector2(1.0000005, -1479)
 rotation = -1.5760323
 
+[node name="EnemySpawner3" parent="EnemySpawnersPack" unique_id=2012478858 instance=ExtResource("3_g5kkq")]
+position = Vector2(1816, -1471)
+rotation = -1.5760323
+
+[node name="EnemySpawner2" parent="EnemySpawnersPack" unique_id=1141217025 instance=ExtResource("3_g5kkq")]
+position = Vector2(-1780.9999, -1496)
+rotation = -1.5760323
+
 [node name="EnemySpawner6" parent="EnemySpawnersPack" unique_id=663577117 instance=ExtResource("3_g5kkq")]
-position = Vector2(2, 1405)
+position = Vector2(10, 1413)
+rotation = 1.5707964
+
+[node name="EnemySpawner14" parent="EnemySpawnersPack" unique_id=10735914 instance=ExtResource("3_g5kkq")]
+position = Vector2(1785, 1364)
+rotation = 1.5707964
+
+[node name="EnemySpawner13" parent="EnemySpawnersPack" unique_id=1992041044 instance=ExtResource("3_g5kkq")]
+position = Vector2(-1748, 1389)
 rotation = 1.5707964
 
 [node name="EnemySpawner7" parent="EnemySpawnersPack" unique_id=1675700921 instance=ExtResource("3_g5kkq")]
 position = Vector2(-2323, -11)
 rotation = 3.1415927
 
+[node name="EnemySpawner10" parent="EnemySpawnersPack" unique_id=1379004791 instance=ExtResource("3_g5kkq")]
+position = Vector2(-2315, 958)
+rotation = 3.1415927
+
+[node name="EnemySpawner9" parent="EnemySpawnersPack" unique_id=1802393513 instance=ExtResource("3_g5kkq")]
+position = Vector2(-2331, -996)
+rotation = 3.1415927
+
 [node name="EnemySpawner8" parent="EnemySpawnersPack" unique_id=919239296 instance=ExtResource("3_g5kkq")]
 position = Vector2(3576, 6)
+rotation = -3.1415927
+
+[node name="EnemySpawner12" parent="EnemySpawnersPack" unique_id=926769582 instance=ExtResource("3_g5kkq")]
+position = Vector2(3592, 991)
+rotation = -3.1415927
+
+[node name="EnemySpawner11" parent="EnemySpawnersPack" unique_id=209501437 instance=ExtResource("3_g5kkq")]
+position = Vector2(3576, -971)
 rotation = -3.1415927

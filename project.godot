@@ -29,6 +29,7 @@ window/size/viewport_height=720
 asteroids="Cada asteroide nuevo que se haga se meterá acá para mantener orden y que funcionen todos iguales"
 bullets="Todo tipo de objetos que se consideren balas irán aquí"
 asteroidkillers="Este es un grupo para contener los muros que destruiran los asteroides que no se dirijan al jugador"
+player="El fokin jugador, pues quién más"
 
 [input]
 

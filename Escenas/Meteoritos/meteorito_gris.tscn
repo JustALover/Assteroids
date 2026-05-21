@@ -25,9 +25,4 @@ collision_mask = 38
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1375400593]
 polygon = PackedVector2Array(-26, 159, 110, 110, 135, -56, 129, -101, 141, -130, 34, -168, -29, -132, -75, -120, -160, 34, -122, 123)
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1253028814]
-position = Vector2(-74, -91)
-rect = Rect2(-165, -175.77615, 492, 536.05975)
-
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
