@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dwqw87qwkvp1d"]
 
-[ext_resource type="Script" uid="uid://buo8wm642kxk7" path="res://enemy_spawner.gd" id="1_rpup8"]
+[ext_resource type="Script" uid="uid://buo8wm642kxk7" path="res://Escenas/Enemy Spawner/enemy_spawner.gd" id="1_rpup8"]
 [ext_resource type="PackedScene" uid="uid://br3tpm36r2qde" path="res://Escenas/Meteoritos/meteorito_gris.tscn" id="2_edqlm"]
 [ext_resource type="PackedScene" uid="uid://namjd6pboaw5" path="res://Escenas/Meteoritos/meteorito_blanco.tscn" id="3_4cltd"]
 [ext_resource type="Texture2D" uid="uid://rc4clc8jyyoj" path="res://icon.svg" id="4_4cltd"]

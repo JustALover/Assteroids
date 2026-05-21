@@ -11,8 +11,8 @@ size = Vector2(221, 2103.5)
 size = Vector2(221, 3950.75)
 
 [node name="ASSteroids(Game)" type="Node2D" unique_id=243724691]
-metadata/_edit_vertical_guides_ = [-1865.0, 1865.0]
-metadata/_edit_horizontal_guides_ = [1048.0, -1049.0]
+metadata/_edit_vertical_guides_ = [-4515.0, 5055.0]
+metadata/_edit_horizontal_guides_ = [-3638.0, 3262.0]
 
 [node name="FondoEstrellado" type="Sprite2D" parent="." unique_id=1276062371]
 texture_filter = 1
@@ -65,20 +65,20 @@ position = Vector2(1995, 1164)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_g5kkq")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1961967120]
+[node name="EnemySpawnersPack" type="Node2D" parent="." unique_id=1961967120]
 
-[node name="EnemySpawner" parent="Node2D" unique_id=1219074892 instance=ExtResource("3_g5kkq")]
+[node name="EnemySpawner" parent="EnemySpawnersPack" unique_id=1219074892 instance=ExtResource("3_g5kkq")]
 position = Vector2(1.0000005, -1479)
 rotation = -1.5760323
 
-[node name="EnemySpawner6" parent="Node2D" unique_id=663577117 instance=ExtResource("3_g5kkq")]
+[node name="EnemySpawner6" parent="EnemySpawnersPack" unique_id=663577117 instance=ExtResource("3_g5kkq")]
 position = Vector2(2, 1405)
 rotation = 1.5707964
 
-[node name="EnemySpawner7" parent="Node2D" unique_id=1675700921 instance=ExtResource("3_g5kkq")]
+[node name="EnemySpawner7" parent="EnemySpawnersPack" unique_id=1675700921 instance=ExtResource("3_g5kkq")]
 position = Vector2(-2323, -11)
 rotation = 3.1415927
 
-[node name="EnemySpawner8" parent="Node2D" unique_id=919239296 instance=ExtResource("3_g5kkq")]
+[node name="EnemySpawner8" parent="EnemySpawnersPack" unique_id=919239296 instance=ExtResource("3_g5kkq")]
 position = Vector2(3576, 6)
 rotation = -3.1415927

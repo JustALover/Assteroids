@@ -15,10 +15,20 @@ run/main_scene="uid://7hlhkb88kpxh"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://cuw481iqsq5x6"
+
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+
+[global_group]
+
+asteroids="Cada asteroide nuevo que se haga se meterá acá para mantener orden y que funcionen todos iguales"
+bullets="Todo tipo de objetos que se consideren balas irán aquí"
+asteroidkillers="Este es un grupo para contener los muros que destruiran los asteroides que no se dirijan al jugador"
 
 [input]
 
@@ -67,6 +77,7 @@ SHOOT={
 2d_physics/layer_3="Bullets"
 2d_physics/layer_4="Asteroids"
 2d_physics/layer_5="Borderlands(Walls)"
+2d_physics/layer_6="AsteroidKiller"
 
 [physics]
 
