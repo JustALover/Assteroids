@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bqeosked7nujo"]
+
+[ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="1_5h7dq"]
+
+[node name="PlayerScore" type="Control" unique_id=1549266308]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="." unique_id=1159510190]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -37.5
+offset_right = 37.5
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_5h7dq")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 2

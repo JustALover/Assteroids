@@ -21,5 +21,8 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_area_entered(bala) -> void:
 	if bala.is_in_group("bullets"):
+		#PUNTAJE:
+		Global.add_score(10)
+		#DESTRUIR BALA Y ASTEROIDE
 		queue_free()
 		bala.queue_free()
