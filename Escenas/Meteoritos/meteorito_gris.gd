@@ -7,6 +7,11 @@ func _process(delta: float) -> void:
 	velocity = direction * speed * delta
 	move_and_slide()
 
+	if position.x < -3121 or position.x > 3911:
+		queue_free()
+
+	if position.y < -2292 or position.y > 2130:
+		queue_free()
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()

@@ -70,3 +70,8 @@ func _physics_process(delta):
 
 func _on_shoot_cooldown_timeout() -> void:
 	can_shoot = true
+
+
+func _on_area_2d_area_entered(meteorito: Area2D) -> void:
+	if meteorito.is_in_group("asteroids"):
+		print("Moriste puta")

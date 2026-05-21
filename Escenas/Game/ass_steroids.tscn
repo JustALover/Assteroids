@@ -11,7 +11,7 @@ size = Vector2(221, 2103.5)
 size = Vector2(221, 3950.75)
 
 [node name="ASSteroids(Game)" type="Node2D" unique_id=243724691]
-metadata/_edit_vertical_guides_ = [-4515.0, 5055.0]
+metadata/_edit_vertical_guides_ = [5055.0]
 metadata/_edit_horizontal_guides_ = [-3638.0, 3262.0]
 
 [node name="FondoEstrellado" type="Sprite2D" parent="." unique_id=1276062371]

@@ -14,14 +14,14 @@ func _process(_delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
-	print("Enemy spawning...")
+	#print("Enemy spawning...")
 	var opciones = [asteroid_grey, asteroid_white]
 	var elegido = opciones.pick_random()
 	var asteroid = elegido.instantiate()
-	if elegido == asteroid_grey:
-		print("Asteroide Gris")
-	else:
-		print("Asteroide Blanco")
+	#if elegido == asteroid_grey:
+		#print("Asteroide Gris")
+	#else:
+		#print("Asteroide Blanco")
 	var screen_size = get_viewport_rect().size
 	var center = screen_size / 2
 	var lado = randi() % 4

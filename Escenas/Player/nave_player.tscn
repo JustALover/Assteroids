@@ -174,9 +174,12 @@ one_shot = true
 autostart = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1981639779]
+collision_layer = 2
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1520137218]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_evitx")
 
 [connection signal="timeout" from="ShootCooldown" to="." method="_on_shoot_cooldown_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
