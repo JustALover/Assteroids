@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
 
-[node name="Label" type="Label" parent="." unique_id=1159510190]
+[node name="CurrentScore" type="Label" parent="." unique_id=1159510190]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

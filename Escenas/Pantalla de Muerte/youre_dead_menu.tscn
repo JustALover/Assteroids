@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bs28dmvauvti3"]
 
 [ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="1_oodm3"]
+[ext_resource type="Script" uid="uid://dok6qlkrnvg0g" path="res://Escenas/Pantalla de Muerte/youre_dead_menu.gd" id="1_toa86"]
 
 [node name="YoureDeadMenu" type="Control" unique_id=1607171572]
 layout_mode = 3
@@ -9,8 +10,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_toa86")
 
-[node name="Label" type="Label" parent="." unique_id=1565580038]
+[node name="MoristeLabel" type="Label" parent="." unique_id=1565580038]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -26,3 +28,41 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_oodm3")
 theme_override_font_sizes/font_size = 50
 text = "MORISTE"
+
+[node name="CurrentScore" type="Label" parent="." unique_id=1497215686]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.64000005
+anchor_right = 0.5
+anchor_bottom = 0.64000005
+offset_left = -159.0
+offset_top = 22.199982
+offset_right = 161.0
+offset_bottom = 45.19998
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("1_oodm3")
+theme_override_font_sizes/font_size = 20
+text = "Highest Score:"
+horizontal_alignment = 1
+
+[node name="HighestScoreNumber" type="Label" parent="." unique_id=916922840]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.64000005
+anchor_right = 0.5
+anchor_bottom = 0.64000005
+offset_left = -156.0
+offset_top = 69.19998
+offset_right = 164.0
+offset_bottom = 92.19998
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("1_oodm3")
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
