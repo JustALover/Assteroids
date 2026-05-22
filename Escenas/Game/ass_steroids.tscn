@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dwqw87qwkvp1d" path="res://Escenas/Enemy Spawner/enemy_spawner.tscn" id="3_g5kkq"]
 [ext_resource type="Script" uid="uid://bms55m6e63ygf" path="res://Escenas/Score/player_score.gd" id="4_dqheg"]
 [ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="5_c7aif"]
+[ext_resource type="Script" uid="uid://cjca6y3jyu65a" path="res://Escenas/Game/pause_menu.gd" id="7_0g65r"]
+[ext_resource type="Texture2D" uid="uid://rc4clc8jyyoj" path="res://icon.svg" id="7_kn4c5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pox43"]
 size = Vector2(221, 2103.5)
@@ -138,3 +140,13 @@ theme_override_font_sizes/font_size = 40
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=747842075]
+process_mode = 3
+script = ExtResource("7_0g65r")
+
+[node name="PauseImage" type="TextureRect" parent="PauseMenu" unique_id=1390229705]
+visible = false
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("7_kn4c5")
