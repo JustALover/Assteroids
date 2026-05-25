@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://namjd6pboaw5"]
 
-[ext_resource type="Texture2D" uid="uid://cepc1dibvquvh" path="res://Texturas/meteorito.png" id="1_7g33x"]
+[ext_resource type="Texture2D" uid="uid://cepc1dibvquvh" path="res://Texturas/Meteoritos/meteorito.png" id="1_7g33x"]
 [ext_resource type="Script" uid="uid://cpnbilxke3ke8" path="res://Escenas/Meteoritos/meteorito_blanco.gd" id="1_qrjc0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qrjc0"]

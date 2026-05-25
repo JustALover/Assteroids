@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://2gtwg7703r35"]
+
+[ext_resource type="Texture2D" uid="uid://dj1p4dfn3b4cc" path="res://Texturas/Botones/Menu Principal/play_button_normal (2).png" id="1_2umud"]
+[ext_resource type="Texture2D" uid="uid://55us1qe4mw3w" path="res://Texturas/Botones/Menu Principal/play_button_pressed (2).png" id="2_d5xb8"]
+[ext_resource type="Texture2D" uid="uid://bgl2vrxhvxyv8" path="res://Texturas/Botones/Menu Principal/play_button_hover (2).png" id="3_6nstj"]
+[ext_resource type="Script" uid="uid://5ovhpjlihhhi" path="res://Escenas/Buttons/play_button_title.gd" id="4_h6yoc"]
+[ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="5_vpk57"]
+
+[sub_resource type="Animation" id="Animation_6lm0r"]
+resource_name = "DesHover"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:pivot_offset_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-2, 0), Vector2(-1, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.05, 1.05), Vector2(1.025, 1.025), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rcfok"]
+resource_name = "DesPressed"
+length = 0.13333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.98, 0.98), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3gwak"]
+resource_name = "Hover"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:pivot_offset_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1, 0), Vector2(-2, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:mouse_default_cursor_shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.025, 1.025), Vector2(1.05, 1.05)]
+}
+
+[sub_resource type="Animation" id="Animation_fl2lq"]
+resource_name = "Pressed"
+length = 0.26666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.05, 1.05), Vector2(0.95, 0.95)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:pivot_offset_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-2, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hvi0j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:mouse_default_cursor_shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:pivot_offset_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6lm0r"]
+_data = {
+&"DesHover": SubResource("Animation_6lm0r"),
+&"DesPressed": SubResource("Animation_rcfok"),
+&"Hover": SubResource("Animation_3gwak"),
+&"Pressed": SubResource("Animation_fl2lq"),
+&"RESET": SubResource("Animation_hvi0j")
+}
+
+[node name="PlayButton" type="TextureButton" unique_id=1522335118]
+anchors_preset = -1
+anchor_left = 0.32000002
+anchor_top = 0.216
+anchor_right = 0.32000002
+anchor_bottom = 0.32700002
+offset_left = -299.60004
+offset_top = -0.5200043
+offset_right = 300.39996
+offset_bottom = -0.4400177
+grow_vertical = 2
+pivot_offset = Vector2(299, 36)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_2umud")
+texture_pressed = ExtResource("2_d5xb8")
+texture_hover = ExtResource("3_6nstj")
+script = ExtResource("4_h6yoc")
+
+[node name="Play" type="Label" parent="." unique_id=135376896]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.768
+anchor_right = 0.883
+anchor_bottom = 0.9760001
+offset_left = -462.70477
+offset_right = -516.4667
+offset_bottom = 0.01524353
+theme_override_fonts/font = ExtResource("5_vpk57")
+theme_override_font_sizes/font_size = 65
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="AnimationsPlayButton" type="AnimationPlayer" parent="." unique_id=275305321]
+root_node = NodePath("../Play")
+libraries/ = SubResource("AnimationLibrary_6lm0r")
+playback_auto_capture_transition_type = 6
+
+[node name="AudioPlayerPlayButton" type="AudioStreamPlayer2D" parent="." unique_id=744979188]
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

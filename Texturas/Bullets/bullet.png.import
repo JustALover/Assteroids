@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfgr75baym6ox"
-path="res://.godot/imported/fuego_nave.png-e2a9ce654c89f540b09644186cc1f69e.ctex"
+uid="uid://7ij70g64bjdi"
+path="res://.godot/imported/bullet.png-0509db60013132363fa96a0a87fb1c59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texturas/fuego_nave.png"
-dest_files=["res://.godot/imported/fuego_nave.png-e2a9ce654c89f540b09644186cc1f69e.ctex"]
+source_file="res://Texturas/Bullets/bullet.png"
+dest_files=["res://.godot/imported/bullet.png-0509db60013132363fa96a0a87fb1c59.ctex"]
 
 [params]
 

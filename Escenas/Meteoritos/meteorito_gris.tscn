@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://br3tpm36r2qde"]
 
-[ext_resource type="Texture2D" uid="uid://bv34u7up14b58" path="res://Texturas/Meteorito gris.png" id="1_03ys6"]
+[ext_resource type="Texture2D" uid="uid://bv34u7up14b58" path="res://Texturas/Meteoritos/Meteorito gris.png" id="1_03ys6"]
 [ext_resource type="Script" uid="uid://c04vqpfo26aos" path="res://Escenas/Meteoritos/meteorito_gris.gd" id="1_visty"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_visty"]

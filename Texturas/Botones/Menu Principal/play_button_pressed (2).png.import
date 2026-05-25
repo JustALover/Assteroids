@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5isycfa3ebhg"
-path="res://.godot/imported/EstrellasFondo.png-515b1b7f68c456bbf8d54e429ff6b0c5.ctex"
+uid="uid://55us1qe4mw3w"
+path="res://.godot/imported/play_button_pressed (2).png-2056709832ff6c0420a166588ba3c503.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texturas/EstrellasFondo.png"
-dest_files=["res://.godot/imported/EstrellasFondo.png-515b1b7f68c456bbf8d54e429ff6b0c5.ctex"]
+source_file="res://Texturas/Botones/Menu Principal/play_button_pressed (2).png"
+dest_files=["res://.godot/imported/play_button_pressed (2).png-2056709832ff6c0420a166588ba3c503.ctex"]
 
 [params]
 

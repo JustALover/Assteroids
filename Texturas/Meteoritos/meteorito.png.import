@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://misubweemvrh"
-path="res://.godot/imported/Fuego_motor.png-9860748cfa4cb705f0b579027fcc32e3.ctex"
+uid="uid://cepc1dibvquvh"
+path="res://.godot/imported/meteorito.png-b3f6f542c60ce373d963999a98317cd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texturas/Fuego_motor.png"
-dest_files=["res://.godot/imported/Fuego_motor.png-9860748cfa4cb705f0b579027fcc32e3.ctex"]
+source_file="res://Texturas/Meteoritos/meteorito.png"
+dest_files=["res://.godot/imported/meteorito.png-b3f6f542c60ce373d963999a98317cd8.ctex"]
 
 [params]
 

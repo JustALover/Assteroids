@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b2ynjpdsm023g" path="res://Escenas/Player/nave_player.gd" id="1_m4jb0"]
 [ext_resource type="PackedScene" uid="uid://tk7oi1p4d53v" path="res://Escenas/Bullet/bullet.tscn" id="2_k17av"]
-[ext_resource type="Texture2D" uid="uid://lpbfmgbg53bb" path="res://Texturas/Milano.png" id="2_xq14b"]
-[ext_resource type="Texture2D" uid="uid://misubweemvrh" path="res://Texturas/Fuego_motor.png" id="3_evitx"]
-[ext_resource type="Texture2D" uid="uid://bfgr75baym6ox" path="res://Texturas/fuego_nave.png" id="4_k17av"]
+[ext_resource type="Texture2D" uid="uid://lpbfmgbg53bb" path="res://Texturas/Naves/Milano.png" id="2_xq14b"]
+[ext_resource type="Texture2D" uid="uid://misubweemvrh" path="res://Texturas/Motor Nave/Fuego_motor.png" id="3_evitx"]
+[ext_resource type="Texture2D" uid="uid://bfgr75baym6ox" path="res://Texturas/Motor Nave/fuego_nave.png" id="4_k17av"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpkag"]
 atlas = ExtResource("3_evitx")

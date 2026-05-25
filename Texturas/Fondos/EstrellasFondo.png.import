@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv34u7up14b58"
-path="res://.godot/imported/Meteorito gris.png-dc833dc62923b608702ee002c369a0f7.ctex"
+uid="uid://5isycfa3ebhg"
+path="res://.godot/imported/EstrellasFondo.png-8d8ff9791c5612af27d3424b8e7cc05a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texturas/Meteorito gris.png"
-dest_files=["res://.godot/imported/Meteorito gris.png-dc833dc62923b608702ee002c369a0f7.ctex"]
+source_file="res://Texturas/Fondos/EstrellasFondo.png"
+dest_files=["res://.godot/imported/EstrellasFondo.png-8d8ff9791c5612af27d3424b8e7cc05a.ctex"]
 
 [params]
 

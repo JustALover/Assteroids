@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lpbfmgbg53bb"
-path="res://.godot/imported/Milano.png-0d8aea8bd31e46da69af88f817293b46.ctex"
+uid="uid://dj1p4dfn3b4cc"
+path="res://.godot/imported/play_button_normal (2).png-04e2ed34867dc8bd331203984317f15b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texturas/Milano.png"
-dest_files=["res://.godot/imported/Milano.png-0d8aea8bd31e46da69af88f817293b46.ctex"]
+source_file="res://Texturas/Botones/Menu Principal/play_button_normal (2).png"
+dest_files=["res://.godot/imported/play_button_normal (2).png-04e2ed34867dc8bd331203984317f15b.ctex"]
 
 [params]
 

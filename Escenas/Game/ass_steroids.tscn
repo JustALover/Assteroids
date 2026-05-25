@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://856uwliqm7fg" path="res://Escenas/Game/ass_steroids.gd" id="1_dqheg"]
 [ext_resource type="PackedScene" uid="uid://qxg2yqw0cdqt" path="res://Escenas/Player/nave_player.tscn" id="1_eeofm"]
-[ext_resource type="Texture2D" uid="uid://5isycfa3ebhg" path="res://Texturas/EstrellasFondo.png" id="1_pox43"]
+[ext_resource type="Texture2D" uid="uid://5isycfa3ebhg" path="res://Texturas/Fondos/EstrellasFondo.png" id="1_pox43"]
 [ext_resource type="PackedScene" uid="uid://dwqw87qwkvp1d" path="res://Escenas/Enemy Spawner/enemy_spawner.tscn" id="3_g5kkq"]
 [ext_resource type="Script" uid="uid://bms55m6e63ygf" path="res://Escenas/Score/player_score.gd" id="4_dqheg"]
 [ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="5_c7aif"]
@@ -110,15 +110,15 @@ position = Vector2(-2618, -36)
 rotation = 3.1415927
 
 [node name="EnemySpawner12" parent="EnemySpawnersPack" unique_id=926769582 instance=ExtResource("3_g5kkq")]
-position = Vector2(3574, 994)
+position = Vector2(4120, 964)
 rotation = -3.1415927
 
 [node name="EnemySpawner13" parent="EnemySpawnersPack" unique_id=334945719 instance=ExtResource("3_g5kkq")]
-position = Vector2(3566, 2)
+position = Vector2(4122, 2)
 rotation = -3.1415927
 
 [node name="EnemySpawner11" parent="EnemySpawnersPack" unique_id=209501437 instance=ExtResource("3_g5kkq")]
-position = Vector2(3560, -1019)
+position = Vector2(4121, -1001)
 rotation = -3.1415927
 
 [node name="PlayerScore" type="CanvasLayer" parent="." unique_id=1913061682]

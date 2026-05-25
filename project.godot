@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ASSteroids"
-run/main_scene="uid://7hlhkb88kpxh"
+run/main_scene="uid://b25orbgb57x5e"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -90,4 +90,5 @@ SHOOT={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=3
 rendering_device/driver.windows="d3d12"
