@@ -103,7 +103,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1.05, 1.05), Vector2(0.95, 0.95)]
+"values": [Vector2(1.05, 1.05), Vector2(0.8, 0.8)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -184,7 +184,7 @@ texture_pressed = ExtResource("2_d5xb8")
 texture_hover = ExtResource("3_6nstj")
 script = ExtResource("4_h6yoc")
 
-[node name="Play" type="Label" parent="." unique_id=135376896]
+[node name="PlayButtonLabel" type="Label" parent="." unique_id=135376896]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.768
@@ -199,7 +199,7 @@ horizontal_alignment = 2
 vertical_alignment = 2
 
 [node name="AnimationsPlayButton" type="AnimationPlayer" parent="." unique_id=275305321]
-root_node = NodePath("../Play")
+root_node = NodePath("../PlayButtonLabel")
 libraries/ = SubResource("AnimationLibrary_6lm0r")
 playback_auto_capture_transition_type = 6
 

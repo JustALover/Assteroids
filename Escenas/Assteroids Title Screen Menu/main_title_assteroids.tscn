@@ -1,0 +1,259 @@
+[gd_scene format=3 uid="uid://b25orbgb57x5e"]
+
+[ext_resource type="Script" uid="uid://c8srh74ywail6" path="res://Escenas/Assteroids Title Screen Menu/main_title_assteroids.gd" id="1_0u5ad"]
+[ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="2_clr4r"]
+[ext_resource type="Texture2D" uid="uid://ohrqbanby11k" path="res://Texturas/Fondos/Main title BG 4k.png" id="2_j22t0"]
+[ext_resource type="PackedScene" uid="uid://2gtwg7703r35" path="res://Escenas/Buttons/play_button_title.tscn" id="3_j22t0"]
+[ext_resource type="Texture2D" uid="uid://d3ivwjxu7fxrb" path="res://Texturas/MilanoFast 1.png" id="4_dk712"]
+
+[sub_resource type="Animation" id="Animation_clr4r"]
+resource_name = "new_animation"
+length = 1.3333334
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MilanoTitle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3667, 0.7, 1.05, 1.309118),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(894.99994, 421.00006), Vector2(869.99994, 446.00006), Vector2(894.99994, 421.00006), Vector2(869.99994, 446.00006), Vector2(894.99994, 421.00006)]
+}
+
+[sub_resource type="Animation" id="Animation_j22t0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MilanoTitle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(894.99994, 421.00006)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dk712"]
+_data = {
+&"Milano (Pa-lante Pa-tra)": SubResource("Animation_clr4r"),
+&"RESET": SubResource("Animation_j22t0")
+}
+
+[node name="MainTitleAssteroids" type="Control" unique_id=1304772162]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0u5ad")
+metadata/_edit_vertical_guides_ = [-67.0, 533.0]
+
+[node name="MainTitleBackground" type="Sprite2D" parent="." unique_id=1189136933]
+modulate = Color(0.8745098, 1, 1, 1)
+position = Vector2(640, 369)
+scale = Vector2(0.25560144, 0.2556014)
+texture = ExtResource("2_j22t0")
+
+[node name="MilanoTitle" type="Sprite2D" parent="." unique_id=1782224653]
+position = Vector2(894.99994, 421.00006)
+scale = Vector2(0.40549847, 0.40549856)
+texture = ExtResource("4_dk712")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=543495475]
+self_modulate = Color(1, 1, 1, 0)
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.044000003
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.3200035
+offset_right = -1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=819533223]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="LeftContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=679926880]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 5
+alignment = 2
+
+[node name="VersionContainer2" type="VBoxContainer" parent="PanelContainer/HBoxContainer/LeftContainer" unique_id=1229427832]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/LeftContainer/VersionContainer2" unique_id=1118321647]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_clr4r")
+theme_override_font_sizes/font_size = 20
+text = "VER.1.X.X.X"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="ButtonsPlayerContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/LeftContainer" unique_id=351750374]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_constants/separation = 45
+
+[node name="PlayButton" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer" unique_id=1522335118 instance=ExtResource("3_j22t0")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="PlayLabel" type="Label" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer/PlayButton" unique_id=581305589]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89400005
+anchor_top = 0.117000006
+anchor_right = 0.89400005
+anchor_bottom = 0.887
+offset_left = -283.40002
+offset_top = -3.360014
+offset_right = -0.26416016
+offset_bottom = 0.039985657
+theme_override_fonts/font = ExtResource("2_clr4r")
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="OptionsButton" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer" unique_id=1595140822 instance=ExtResource("3_j22t0")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Options" type="Label" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer/OptionsButton" unique_id=1730376983]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.892
+anchor_top = 0.117000006
+anchor_right = 0.892
+anchor_bottom = 0.887
+offset_left = -354.2
+offset_top = -3.360014
+offset_right = -0.2000122
+offset_bottom = 0.039985657
+theme_override_fonts/font = ExtResource("2_clr4r")
+theme_override_font_sizes/font_size = 50
+text = "OPTIONS"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="CreditsButton" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer" unique_id=27877043 instance=ExtResource("3_j22t0")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="CreditsLabel" type="Label" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer/CreditsButton" unique_id=945505235]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.892
+anchor_top = 0.125
+anchor_right = 0.892
+anchor_bottom = 0.85
+offset_left = -352.2
+offset_top = 1.0000172
+offset_right = -0.2000122
+offset_bottom = 1.5258789e-05
+theme_override_fonts/font = ExtResource("2_clr4r")
+theme_override_font_sizes/font_size = 50
+text = "CREDITS"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="ExitButton" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer" unique_id=1535760790 instance=ExtResource("3_j22t0")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="ExitLabel" type="Label" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer/ExitButton" unique_id=501993737]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42200002
+anchor_top = 0.17500001
+anchor_right = 0.89400005
+anchor_bottom = 0.87500006
+offset_left = -0.2000122
+offset_top = 1.6212463e-05
+offset_right = -0.26416016
+theme_override_fonts/font = ExtResource("2_clr4r")
+theme_override_font_sizes/font_size = 50
+text = "EXIT"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="PaddingBottomContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/LeftContainer" unique_id=1263722803]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 50
+alignment = 2
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/LeftContainer/PaddingBottomContainer" unique_id=1677088859]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_clr4r")
+theme_override_font_sizes/font_size = 45
+text = "VER.1.X.X.X"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="RightContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=1216117293]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="PaddingRightUp" type="VBoxContainer" parent="PanelContainer/HBoxContainer/RightContainer" unique_id=498185966]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 2
+
+[node name="Options" type="Label" parent="PanelContainer/HBoxContainer/RightContainer/PaddingRightUp" unique_id=6080697]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_clr4r")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="AssteroidsTitle" type="VBoxContainer" parent="PanelContainer/HBoxContainer/RightContainer" unique_id=2079567413]
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 2
+
+[node name="AsteroidsLabel" type="Label" parent="PanelContainer/HBoxContainer/RightContainer/AssteroidsTitle" unique_id=1476284156]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9882353, 0.9372549, 1)
+theme_override_colors/font_outline_color = Color(0.33333334, 0.32941177, 0.31764707, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_clr4r")
+theme_override_font_sizes/font_size = 80
+text = "ASTEROIDS"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="MilanoFastTexture" type="TextureRect" parent="PanelContainer/HBoxContainer/RightContainer" unique_id=1899331014]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_dk712")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MilanoPaLantePaTraAnim" type="AnimationPlayer" parent="." unique_id=7177686]
+libraries/ = SubResource("AnimationLibrary_dk712")
