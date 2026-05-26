@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ohrqbanby11k" path="res://Texturas/Fondos/Main title BG 4k.png" id="2_j22t0"]
 [ext_resource type="PackedScene" uid="uid://2gtwg7703r35" path="res://Escenas/Buttons/play_button_title.tscn" id="3_j22t0"]
 [ext_resource type="Texture2D" uid="uid://d3ivwjxu7fxrb" path="res://Texturas/MilanoFast 1.png" id="4_dk712"]
+[ext_resource type="Texture2D" uid="uid://bgl2vrxhvxyv8" path="res://Texturas/Botones/Menu Principal/play_button_hover (2).png" id="6_j22t0"]
 
 [sub_resource type="Animation" id="Animation_clr4r"]
 resource_name = "new_animation"
@@ -116,6 +117,9 @@ theme_override_constants/separation = 45
 [node name="PlayButton" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer" unique_id=1522335118 instance=ExtResource("3_j22t0")]
 texture_filter = 1
 layout_mode = 2
+focus_neighbor_top = NodePath("../ExitButton")
+focus_neighbor_bottom = NodePath("../OptionsButton")
+texture_focused = ExtResource("6_j22t0")
 
 [node name="PlayLabel" type="Label" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer/PlayButton" unique_id=581305589]
 layout_mode = 1
@@ -137,6 +141,9 @@ vertical_alignment = 2
 [node name="OptionsButton" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer" unique_id=1595140822 instance=ExtResource("3_j22t0")]
 texture_filter = 1
 layout_mode = 2
+focus_neighbor_top = NodePath("../PlayButton")
+focus_neighbor_bottom = NodePath("../CreditsButton")
+texture_focused = ExtResource("6_j22t0")
 
 [node name="Options" type="Label" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer/OptionsButton" unique_id=1730376983]
 layout_mode = 1
@@ -158,6 +165,9 @@ vertical_alignment = 2
 [node name="CreditsButton" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer" unique_id=27877043 instance=ExtResource("3_j22t0")]
 texture_filter = 1
 layout_mode = 2
+focus_neighbor_top = NodePath("../OptionsButton")
+focus_neighbor_bottom = NodePath("../ExitButton")
+texture_focused = ExtResource("6_j22t0")
 
 [node name="CreditsLabel" type="Label" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer/CreditsButton" unique_id=945505235]
 layout_mode = 1
@@ -179,6 +189,9 @@ vertical_alignment = 2
 [node name="ExitButton" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer" unique_id=1535760790 instance=ExtResource("3_j22t0")]
 texture_filter = 1
 layout_mode = 2
+focus_neighbor_top = NodePath("../CreditsButton")
+focus_neighbor_bottom = NodePath("../PlayButton")
+texture_focused = ExtResource("6_j22t0")
 
 [node name="ExitLabel" type="Label" parent="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer/ExitButton" unique_id=501993737]
 layout_mode = 1

@@ -4,6 +4,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$MilanoPaLantePaTraAnim.play("Milano (Pa-lante Pa-tra)")
+	$PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer/PlayButton.grab_focus()
 
 
 
