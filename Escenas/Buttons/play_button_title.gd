@@ -26,8 +26,8 @@ func _on_mouse_exited() -> void:
 func _on_button_down() -> void:
 	$AnimationsPlayButton.play("Pressed")
 	pressedd = true
-	await get_tree().create_timer(0.040).timeout
-	get_tree().change_scene_to_file("res://Escenas/Game/ass_steroids.tscn")
+	#await get_tree().create_timer(0.040).timeout
+	#get_tree().change_scene_to_file("res://Escenas/Game/ass_steroids.tscn")
 
 
 func _on_button_up() -> void:

@@ -5,7 +5,7 @@ extends Control
 func _ready() -> void:
 	$CurrentScore.text = "Your Score" + " " + str(Global.get_score())
 	$HighestScoreNumber.text = "Highest Score" + " " + str(Global.get_highest_score())
-
+	$TryAgainAnim.play("TryAgainHeartBeat")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

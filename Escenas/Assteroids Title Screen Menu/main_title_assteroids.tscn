@@ -73,8 +73,8 @@ anchors_preset = -1
 anchor_left = -0.044000003
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 0.3200035
-offset_right = -1.0
+offset_left = -17.679996
+offset_right = -17.0
 offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -257,3 +257,6 @@ stretch_mode = 5
 
 [node name="MilanoPaLantePaTraAnim" type="AnimationPlayer" parent="." unique_id=7177686]
 libraries/ = SubResource("AnimationLibrary_dk712")
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/LeftContainer/ButtonsPlayerContainer/ExitButton" to="." method="_on_exit_button_pressed"]
