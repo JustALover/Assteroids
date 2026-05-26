@@ -53,6 +53,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8gegd")
+metadata/_edit_vertical_guides_ = [636.0]
 
 [node name="BlackBackground" type="TextureRect" parent="." unique_id=940320070]
 layout_mode = 1
@@ -90,6 +91,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_fs0pw")
 expand_mode = 1
+stretch_mode = 4
 
 [node name="GamePaused!Label" type="Label" parent="." unique_id=163006430]
 layout_mode = 1
@@ -105,6 +107,7 @@ offset_bottom = 0.27998352
 theme_override_fonts/font = ExtResource("5_1jmmk")
 theme_override_font_sizes/font_size = 80
 text = "GAME PAUSED!"
+horizontal_alignment = 1
 
 [node name="PressEscToPlayLabel" type="Label" parent="." unique_id=1492975148]
 layout_mode = 1
@@ -120,6 +123,7 @@ offset_bottom = 0.27996826
 theme_override_fonts/font = ExtResource("6_qfdtc")
 theme_override_font_sizes/font_size = 20
 text = "PRESS ESC TO PLAY"
+horizontal_alignment = 1
 
 [node name="PressEscToPlayAnim" type="AnimationPlayer" parent="." unique_id=39482181]
 root_node = NodePath("../PressEscToPlayLabel")
