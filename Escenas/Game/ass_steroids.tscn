@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://bms55m6e63ygf" path="res://Escenas/Score/player_score.gd" id="4_dqheg"]
 [ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="5_c7aif"]
 [ext_resource type="Script" uid="uid://cjca6y3jyu65a" path="res://Escenas/Game/pause_menu.gd" id="7_0g65r"]
-[ext_resource type="Texture2D" uid="uid://rc4clc8jyyoj" path="res://icon.svg" id="7_kn4c5"]
+[ext_resource type="PackedScene" uid="uid://bs4actkpv7akj" path="res://Escenas/Pause Menu/pause_menu.tscn" id="8_0g65r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pox43"]
 size = Vector2(221, 2103.5)
@@ -17,7 +17,7 @@ size = Vector2(221, 3950.75)
 
 [node name="ASSteroids(Game)" type="Node2D" unique_id=243724691]
 script = ExtResource("1_dqheg")
-metadata/_edit_vertical_guides_ = [5055.0]
+metadata/_edit_vertical_guides_ = [5055.0, 637.0]
 metadata/_edit_horizontal_guides_ = [-3638.0, 3262.0]
 
 [node name="FondoEstrellado" type="Sprite2D" parent="." unique_id=1276062371]
@@ -31,7 +31,6 @@ texture = ExtResource("1_pox43")
 [node name="BulletsContainer" type="Node2D" parent="." unique_id=1877313993]
 
 [node name="BorderlandsWalls" type="Node2D" parent="." unique_id=1625837732]
-visible = false
 
 [node name="Area2D" type="StaticBody2D" parent="BorderlandsWalls" unique_id=1204340425]
 position = Vector2(-1975, -3)
@@ -145,8 +144,5 @@ vertical_alignment = 2
 process_mode = 3
 script = ExtResource("7_0g65r")
 
-[node name="PauseImage" type="TextureRect" parent="PauseMenu" unique_id=1390229705]
+[node name="PauseMenuUI" parent="PauseMenu" unique_id=412370737 instance=ExtResource("8_0g65r")]
 visible = false
-offset_right = 128.0
-offset_bottom = 128.0
-texture = ExtResource("7_kn4c5")

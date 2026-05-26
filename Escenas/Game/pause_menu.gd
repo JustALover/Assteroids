@@ -8,7 +8,7 @@ func _input(event):
 		paused = !paused
 		get_tree().paused = paused
 		
-		$PauseImage.visible = paused
+		$PauseMenuUI.visible = paused
 		print("Juego ha sido pausado o despausado")
 
 # Called when the node enters the scene tree for the first time.

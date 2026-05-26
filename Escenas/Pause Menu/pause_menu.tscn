@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://bs4actkpv7akj"]
+
+[ext_resource type="Script" uid="uid://c0rto30yphkle" path="res://Escenas/Pause Menu/pause_menu.gd" id="1_8gegd"]
+[ext_resource type="Texture2D" uid="uid://bn8llynu3evyv" path="res://Texturas/Pause Menu res/BackgroundPause50.png" id="2_3dbgo"]
+[ext_resource type="Texture2D" uid="uid://cvyf6bj5avlhk" path="res://Texturas/Pause Menu res/BlurPause.png" id="3_h86kv"]
+[ext_resource type="Texture2D" uid="uid://bmb0na4cqsea" path="res://Texturas/Pause Menu res/PAUSE ICON.png" id="4_fs0pw"]
+[ext_resource type="FontFile" uid="uid://bb7nnqi2gm3qu" path="res://Fonts/Tiny5-Regular.ttf" id="5_1jmmk"]
+[ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="6_qfdtc"]
+
+[sub_resource type="Animation" id="Animation_icuwt"]
+resource_name = "PRESS ESC FLICK"
+length = 2.4666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.8333333, 1.3666667, 1.8666667, 2.4333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.3019608), Color(1, 1, 1, 0.09803922), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_e00lm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_533sx"]
+_data = {
+&"PRESS ESC FLICKERING": SubResource("Animation_icuwt"),
+&"RESET": SubResource("Animation_e00lm")
+}
+
+[node name="PauseMenuUI" type="Control" unique_id=412370737]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8gegd")
+
+[node name="BlackBackground" type="TextureRect" parent="." unique_id=940320070]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5.333374
+offset_bottom = 3.0
+texture = ExtResource("2_3dbgo")
+expand_mode = 1
+
+[node name="YellowBlur" type="TextureRect" parent="." unique_id=306505163]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 208.0
+offset_top = -75.0
+offset_right = -225.0
+offset_bottom = 52.0
+texture = ExtResource("3_h86kv")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=863922907]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.425
+anchor_top = 0.42200002
+anchor_right = 0.573
+anchor_bottom = 0.74300003
+offset_top = -43.840027
+offset_right = 0.55999756
+offset_bottom = -43.960022
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_fs0pw")
+expand_mode = 1
+
+[node name="GamePaused!Label" type="Label" parent="." unique_id=163006430]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28300002
+anchor_top = 0.187
+anchor_right = 0.712
+anchor_bottom = 0.312
+offset_left = -0.24002075
+offset_top = -43.64
+offset_right = 0.64001465
+offset_bottom = -43.64
+theme_override_fonts/font = ExtResource("5_1jmmk")
+theme_override_font_sizes/font_size = 80
+text = "GAME PAUSED!"
+
+[node name="PressEscToPlayLabel" type="Label" parent="." unique_id=1492975148]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36600003
+anchor_top = 0.88100004
+anchor_right = 0.63100004
+anchor_bottom = 0.91200006
+offset_left = -0.4800415
+offset_top = -44.320007
+offset_right = 0.3199463
+offset_bottom = -43.640015
+theme_override_fonts/font = ExtResource("6_qfdtc")
+theme_override_font_sizes/font_size = 20
+text = "PRESS ESC TO PLAY"
+
+[node name="PressEscToPlayAnim" type="AnimationPlayer" parent="." unique_id=39482181]
+root_node = NodePath("../PressEscToPlayLabel")
+libraries/ = SubResource("AnimationLibrary_533sx")

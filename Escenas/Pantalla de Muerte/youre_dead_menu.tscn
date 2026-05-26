@@ -73,7 +73,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_oodm3")
 theme_override_font_sizes/font_size = 60
-text = "YOU EXPLODE!"
+text = "YOU EXPLODED!"
 
 [node name="TryAgain?" type="Label" parent="." unique_id=275101022]
 layout_mode = 1
@@ -130,7 +130,8 @@ theme_override_font_sizes/font_size = 30
 text = "HIGEST SCORE"
 horizontal_alignment = 1
 
-[node name="YES BUTTON" type="Button" parent="." unique_id=503759766]
+[node name="YESBUTTON" type="Button" parent="." unique_id=503759766]
+self_modulate = Color(1, 1, 1, 0.4745098)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.46600002
@@ -141,8 +142,10 @@ offset_left = 0.5199585
 offset_top = 0.32000732
 offset_right = -0.08001709
 offset_bottom = 0.32000732
+focus_neighbor_top = NodePath("../NOBUTTON")
+focus_neighbor_bottom = NodePath("../NOBUTTON")
 
-[node name="YESLabel" type="Label" parent="YES BUTTON" unique_id=367165693]
+[node name="YESLabel" type="Label" parent="YESBUTTON" unique_id=367165693]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -158,7 +161,8 @@ theme_override_font_sizes/font_size = 30
 text = "YES"
 horizontal_alignment = 1
 
-[node name="YES BUTTON2" type="Button" parent="." unique_id=1525438566]
+[node name="NOBUTTON" type="Button" parent="." unique_id=1525438566]
+self_modulate = Color(1, 1, 1, 0.4745098)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.46600002
@@ -169,8 +173,10 @@ offset_left = 0.5199585
 offset_top = -0.16003418
 offset_right = -0.08001709
 offset_bottom = -0.16003418
+focus_neighbor_top = NodePath("../YESBUTTON")
+focus_neighbor_bottom = NodePath("../YESBUTTON")
 
-[node name="NOLabel" type="Label" parent="YES BUTTON2" unique_id=612960729]
+[node name="NOLabel" type="Label" parent="NOBUTTON" unique_id=612960729]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -189,3 +195,6 @@ horizontal_alignment = 1
 
 [node name="TryAgainAnim" type="AnimationPlayer" parent="." unique_id=1936657825]
 libraries/ = SubResource("AnimationLibrary_wie4h")
+
+[connection signal="pressed" from="YESBUTTON" to="." method="_on_yesbutton_pressed"]
+[connection signal="pressed" from="NOBUTTON" to="." method="_on_nobutton_pressed"]
