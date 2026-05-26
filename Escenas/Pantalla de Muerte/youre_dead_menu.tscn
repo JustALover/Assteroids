@@ -52,8 +52,17 @@ grow_vertical = 2
 script = ExtResource("1_toa86")
 metadata/_edit_vertical_guides_ = [641.0]
 
-[node name="DeathMenuBG" type="Sprite2D" parent="." unique_id=882713810]
-position = Vector2(639, 361)
+[node name="DeathMenuBG" type="TextureRect" parent="." unique_id=60249486]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -18.0
+offset_right = -12.146118
+offset_bottom = 4.439026
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(1.0249999, 1.025)
 texture = ExtResource("2_0d64v")
 
