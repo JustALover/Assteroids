@@ -13,6 +13,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_mouse_entered() -> void:
+	$HoverAndFocusSFX.play()
 	$AnimationsPlayButton.play("Hover")
 	pressedd = false
 
@@ -24,11 +25,19 @@ func _on_mouse_exited() -> void:
 
 
 func _on_button_down() -> void:
+	$PressedSFX.play()
 	$AnimationsPlayButton.play("Pressed")
 	pressedd = true
-	#await get_tree().create_timer(0.040).timeout
-	#get_tree().change_scene_to_file("res://Escenas/Game/ass_steroids.tscn")
 
 
 func _on_button_up() -> void:
 	$AnimationsPlayButton.play("RESET")
+
+
+func _on_focus_entered() -> void:
+	$HoverAndFocusSFX.play()
+	$AnimationsPlayButton.play("Hover")
+
+
+func _on_focus_exited() -> void:
+	$AnimationsPlayButton.play("DesHover")

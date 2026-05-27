@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cepc1dibvquvh" path="res://Texturas/Meteoritos/meteorito.png" id="1_7g33x"]
 [ext_resource type="Script" uid="uid://cpnbilxke3ke8" path="res://Escenas/Meteoritos/meteorito_blanco.gd" id="1_qrjc0"]
+[ext_resource type="AudioStream" uid="uid://0l0fmnkqust8" path="res://SFX/Asteroides Boom/AsteroidBoom.wav" id="3_ywcs6"]
+[ext_resource type="AudioStream" uid="uid://c73dpdr17qfjj" path="res://SFX/Asteroides Boom/AsteroidBoom2.wav" id="4_gy6k2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qrjc0"]
 radius = 76.00658
@@ -26,5 +28,17 @@ collision_mask = 38
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1494601561]
 polygon = PackedVector2Array(-8, 106, 83, 73, 101, -26, 90, -56, 92, -86, 27, -107, -13, -87, -42, -80, -98, 31, -71, 83)
+
+[node name="AsteroidBoom" type="AudioStreamPlayer2D" parent="." unique_id=163360339]
+stream = ExtResource("3_ywcs6")
+max_distance = 300.0
+bus = &"SFX"
+playback_type = 2
+
+[node name="AsteroidBoom2" type="AudioStreamPlayer2D" parent="." unique_id=930772789]
+stream = ExtResource("4_gy6k2")
+max_distance = 300.0
+bus = &"SFX"
+playback_type = 2
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

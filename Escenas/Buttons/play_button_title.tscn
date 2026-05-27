@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bgl2vrxhvxyv8" path="res://Texturas/Botones/Menu Principal/play_button_hover (2).png" id="3_6nstj"]
 [ext_resource type="Script" uid="uid://5ovhpjlihhhi" path="res://Escenas/Buttons/play_button_title.gd" id="4_h6yoc"]
 [ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="5_vpk57"]
+[ext_resource type="AudioStream" uid="uid://df1iam52mf4a0" path="res://SFX/Buttons sounds/Hover.wav" id="6_d5xb8"]
+[ext_resource type="AudioStream" uid="uid://bgk1w6orpp6gc" path="res://SFX/Buttons sounds/Pressed.wav" id="7_6nstj"]
 
 [sub_resource type="Animation" id="Animation_6lm0r"]
 resource_name = "DesHover"
@@ -203,9 +205,18 @@ root_node = NodePath("../PlayButtonLabel")
 libraries/ = SubResource("AnimationLibrary_6lm0r")
 playback_auto_capture_transition_type = 6
 
-[node name="AudioPlayerPlayButton" type="AudioStreamPlayer2D" parent="." unique_id=744979188]
+[node name="HoverAndFocusSFX" type="AudioStreamPlayer" parent="." unique_id=859300482]
+stream = ExtResource("6_d5xb8")
+volume_db = -15.0
+bus = &"SFX"
+
+[node name="PressedSFX" type="AudioStreamPlayer" parent="." unique_id=468043830]
+stream = ExtResource("7_6nstj")
+bus = &"SFX"
 
 [connection signal="button_down" from="." to="." method="_on_button_down"]
 [connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

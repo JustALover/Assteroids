@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://lpbfmgbg53bb" path="res://Texturas/Naves/Milano.png" id="2_xq14b"]
 [ext_resource type="Texture2D" uid="uid://misubweemvrh" path="res://Texturas/Motor Nave/Fuego_motor.png" id="3_evitx"]
 [ext_resource type="Texture2D" uid="uid://bfgr75baym6ox" path="res://Texturas/Motor Nave/fuego_nave.png" id="4_k17av"]
+[ext_resource type="AudioStream" uid="uid://h2e6lh3eouky" path="res://SFX/Disparo nave/Shootnave.ogg" id="6_mqv5s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpkag"]
 atlas = ExtResource("3_evitx")
@@ -180,6 +181,14 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1520137218]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_evitx")
+
+[node name="PewSFXNave" type="AudioStreamPlayer2D" parent="." unique_id=1410274569]
+stream = ExtResource("6_mqv5s")
+volume_db = -70.0
+max_distance = 200.0
+bus = &"SFX"
+area_mask = 0
+playback_type = 2
 
 [connection signal="timeout" from="ShootCooldown" to="." method="_on_shoot_cooldown_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -35,6 +35,7 @@ func die():
 func _physics_process(delta):
 	
 	if Input.is_action_pressed("SHOOT") and can_shoot:
+		play_shoot_sound()
 		shoot()
 	
 	var current_speed = normal_speed
@@ -79,3 +80,18 @@ func _on_shoot_cooldown_timeout() -> void:
 func _on_area_2d_area_entered(meteorito: Area2D) -> void:
 	if meteorito.is_in_group("asteroids"):
 		call_deferred("die")
+		
+
+#Función para hacer el Pew de la nave no se corte de la nada
+func play_shoot_sound():
+	var sound = AudioStreamPlayer2D.new()
+	add_child(sound)
+
+	sound.stream = preload("res://SFX/Disparo nave/Shootnave.ogg")
+	sound.pitch_scale = randf_range(0.9, 1.2)
+	sound.bus = "SFX"
+	sound.global_position = global_position
+	sound.play()
+
+	await sound.finished
+	sound.queue_free()

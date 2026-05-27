@@ -16,13 +16,15 @@ func _process(_delta: float) -> void:
 
 
 func _on_play_button_pressed() -> void:
-	await get_tree().create_timer(0.040).timeout
+	await get_tree().create_timer(0.080).timeout
 	get_tree().change_scene_to_file("res://Escenas/Game/ass_steroids.tscn")
 
 
 func _on_exit_button_pressed() -> void:
+	await get_tree().create_timer(0.080).timeout
 	get_tree().quit()
 
 
 func _on_credits_button_pressed() -> void:
+	await get_tree().create_timer(0.080).timeout
 	get_tree().change_scene_to_file("res://Escenas/Credits/credits_menu.tscn")

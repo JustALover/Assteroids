@@ -3,6 +3,9 @@
 [ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="1_oodm3"]
 [ext_resource type="Script" uid="uid://dok6qlkrnvg0g" path="res://Escenas/Pantalla de Muerte/youre_dead_menu.gd" id="1_toa86"]
 [ext_resource type="Texture2D" uid="uid://42eeodtld005" path="res://Texturas/Fondos/Death Menu.png" id="2_0d64v"]
+[ext_resource type="AudioStream" uid="uid://c56fouvtukbwu" path="res://Music/Death Sound.wav" id="4_0d64v"]
+[ext_resource type="AudioStream" uid="uid://df1iam52mf4a0" path="res://SFX/Buttons sounds/Hover.wav" id="5_wie4h"]
+[ext_resource type="AudioStream" uid="uid://bgk1w6orpp6gc" path="res://SFX/Buttons sounds/Pressed.wav" id="6_r4kn4"]
 
 [sub_resource type="Animation" id="Animation_0d64v"]
 length = 0.001
@@ -205,5 +208,25 @@ horizontal_alignment = 1
 [node name="TryAgainAnim" type="AnimationPlayer" parent="." unique_id=1936657825]
 libraries/ = SubResource("AnimationLibrary_wie4h")
 
+[node name="SFXbuttons" type="Node" parent="." unique_id=237634396]
+
+[node name="HoverAndFocusSFX" type="AudioStreamPlayer" parent="SFXbuttons" unique_id=1761047974]
+stream = ExtResource("5_wie4h")
+volume_db = -15.0
+bus = &"SFX"
+
+[node name="PressedSFX" type="AudioStreamPlayer" parent="SFXbuttons" unique_id=1344256073]
+stream = ExtResource("6_r4kn4")
+bus = &"SFX"
+
+[node name="Music" type="Node" parent="." unique_id=1193180401]
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="Music" unique_id=1844121783]
+stream = ExtResource("4_0d64v")
+volume_db = -10.0
+bus = &"Music"
+
+[connection signal="focus_entered" from="YESBUTTON" to="." method="_on_yesbutton_focus_entered"]
 [connection signal="pressed" from="YESBUTTON" to="." method="_on_yesbutton_pressed"]
+[connection signal="focus_entered" from="NOBUTTON" to="." method="_on_nobutton_focus_entered"]
 [connection signal="pressed" from="NOBUTTON" to="." method="_on_nobutton_pressed"]

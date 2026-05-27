@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://h2e6lh3eouky"
+path="res://.godot/imported/Shootnave.ogg-9fa26a9760beabcf636e03b6f4c24dd2.oggvorbisstr"
+
+[deps]
+
+source_file="res://SFX/Disparo nave/Shootnave.ogg"
+dest_files=["res://.godot/imported/Shootnave.ogg-9fa26a9760beabcf636e03b6f4c24dd2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

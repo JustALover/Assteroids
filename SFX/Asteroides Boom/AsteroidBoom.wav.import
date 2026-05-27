@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0l0fmnkqust8"
+path="res://.godot/imported/AsteroidBoom.wav-55ddba4a97ca089fe8c9349443cb65ce.sample"
+
+[deps]
+
+source_file="res://SFX/Asteroides Boom/AsteroidBoom.wav"
+dest_files=["res://.godot/imported/AsteroidBoom.wav-55ddba4a97ca089fe8c9349443cb65ce.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
