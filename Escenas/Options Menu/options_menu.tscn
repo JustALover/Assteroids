@@ -1,12 +1,20 @@
 [gd_scene format=3 uid="uid://cs6hph0jsjyxd"]
 
 [ext_resource type="Script" uid="uid://ddmlb865no4f1" path="res://Escenas/Options Menu/options_menu.gd" id="1_4h0tw"]
+[ext_resource type="Texture2D" uid="uid://dj1p4dfn3b4cc" path="res://Texturas/Botones/Menu Principal/play_button_normal (2).png" id="2_5hebw"]
 [ext_resource type="PackedScene" uid="uid://cgu7fn8hiwomr" path="res://Texturas/Botones/Slider/volume_changer.tscn" id="2_6krbc"]
+[ext_resource type="Texture2D" uid="uid://cg6fwhfaq0nw1" path="res://Texturas/Fondos/Background options.png" id="2_hg14x"]
+[ext_resource type="Texture2D" uid="uid://1le8hirbarwn" path="res://Texturas/Botones/Checkbox/checkbox checked.png" id="3_1rvlo"]
 [ext_resource type="AudioStream" uid="uid://df1iam52mf4a0" path="res://SFX/Buttons sounds/Hover.wav" id="3_6krbc"]
+[ext_resource type="Texture2D" uid="uid://f66wbmhpgw8v" path="res://Texturas/Botones/Checkbox/Checkbox unchecked.png" id="4_hg14x"]
 [ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="4_hwf73"]
-[ext_resource type="Texture2D" uid="uid://rc4clc8jyyoj" path="res://icon.svg" id="5_xfn3a"]
+[ext_resource type="Texture2D" uid="uid://bun7y1ggmhcsx" path="res://Texturas/Botones/Go back/go back.png" id="6_1rvlo"]
 [ext_resource type="AudioStream" uid="uid://h2e6lh3eouky" path="res://SFX/Disparo nave/Shootnave.ogg" id="6_xfn3a"]
 [ext_resource type="AudioStream" uid="uid://snou8v2wf7a5" path="res://Music/Musictest.wav" id="7_wwnct"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bq1od"]
+atlas = ExtResource("2_5hebw")
+region = Rect2(0, 21.5, 93, 30)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wwnct"]
 font = ExtResource("4_hwf73")
@@ -25,48 +33,78 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4h0tw")
-metadata/_edit_horizontal_guides_ = [285.0, 395.0, 435.0, 545.0]
-metadata/_edit_vertical_guides_ = [126.0]
+metadata/_edit_horizontal_guides_ = [285.0, 395.0, 435.0, 545.0, 148.0, 59.0, 101.0]
+metadata/_edit_vertical_guides_ = [126.0, 661.0, 300.0, 893.0]
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=835448555]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("2_hg14x")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1534531334]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47400004
+anchor_top = 0.056
+anchor_right = 0.47400004
+anchor_bottom = 0.23300001
+offset_left = -339.72003
+offset_top = -0.3199997
+offset_right = 336.27997
+offset_bottom = 0.23999023
+texture = SubResource("AtlasTexture_bq1od")
 
 [node name="CheckBox" type="CheckBox" parent="." unique_id=984409174]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.418
-anchor_top = 0.046000004
-anchor_right = 0.51600003
-anchor_bottom = 0.089
-offset_left = -0.040039063
-offset_top = -0.12000275
-offset_right = 0.5199585
-offset_bottom = -0.08000183
+anchor_left = 0.476
+anchor_top = 0.083000004
+anchor_right = 0.476
+anchor_bottom = 0.20600002
+offset_left = -309.28003
+offset_top = 0.23999786
+offset_right = 288.71997
+offset_bottom = -0.32000732
+theme_override_colors/font_color = Color(0.83984375, 0.8332825, 0.8332825, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/h_separation = 30
+theme_override_fonts/font = ExtResource("4_hwf73")
+theme_override_font_sizes/font_size = 50
+theme_override_constants/check_v_offset = -1
+theme_override_icons/checked = ExtResource("3_1rvlo")
+theme_override_icons/unchecked = ExtResource("4_hg14x")
 text = "FULLSCREEN"
 
 [node name="Button" type="Button" parent="." unique_id=601433709]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.82100004
-anchor_top = 0.157
-anchor_right = 0.82100004
-anchor_bottom = 0.157
-offset_left = -79.880005
-offset_top = -68.04
-offset_right = 80.119995
-offset_bottom = 67.96
-text = "SA"
-icon = ExtResource("5_xfn3a")
+anchor_left = 0.90500003
+anchor_top = 0.068
+anchor_right = 0.90500003
+anchor_bottom = 0.21800001
+offset_left = -54.400024
+offset_top = 0.0399971
+offset_right = 55.599976
+offset_bottom = 0.039993286
+icon = ExtResource("6_1rvlo")
+flat = true
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1044949490]
 position = Vector2(696, 230)
 
 [node name="MasterChangervolume" parent="Node2D" unique_id=509575808 instance=ExtResource("2_6krbc")]
-anchor_left = 0.72300005
-anchor_top = 0.319
-anchor_right = 0.72300005
-anchor_bottom = 0.41700003
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 458.0
-offset_bottom = 70.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 466.0
+offset_bottom = 78.0
 max_value = 1.0
 step = 0.01
 value = 1.0
