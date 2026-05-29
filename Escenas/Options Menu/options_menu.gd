@@ -8,7 +8,7 @@ func masteraudioplacement():
 	var volume_db = AudioServer.get_bus_volume_db(master_bus)
 #
 	$Node2D/MasterChangervolume.value = db_to_linear(volume_db)
-
+	
 func sxfaudioplacement():
 	var SFX_bus = AudioServer.get_bus_index("SFX")
 #
@@ -31,7 +31,24 @@ func _ready() -> void:
 	masteraudioplacement()
 	sxfaudioplacement()
 	musicaudioplacement()
+	#Cargar la posición y valores de los sliders
+	load_sliders()
 
+#Quita temporalmente cualquier señal entrante para ajustar los valores de los sliders
+#Así haciendo que no haya bugs extraños
+func load_sliders():
+	$Node2D/MasterChangervolume.set_block_signals(true)
+	$Node2D/SFXChangervolume.set_block_signals(true)
+	$Node2D/MusicChangervolume.set_block_signals(true)
+
+	$Node2D/MasterChangervolume.value = Settings.master_volume
+	$Node2D/SFXChangervolume.value = Settings.sfx_volume
+	$Node2D/MusicChangervolume.value = Settings.music_volume
+	
+
+	$Node2D/MasterChangervolume.set_block_signals(false)
+	$Node2D/SFXChangervolume.set_block_signals(false)
+	$Node2D/MusicChangervolume.set_block_signals(false)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -39,13 +56,12 @@ func _process(_delta: float) -> void:
 
 #MASTER BUS MANAGER
 func _on_volume_changer_value_changed(value: float) -> void:
-	var master_bus = AudioServer.get_bus_index("Master")
+	var bus = AudioServer.get_bus_index("Master")
 
-	if value <= 0:
-		AudioServer.set_bus_mute(master_bus, true)
-	else:
-		AudioServer.set_bus_mute(master_bus, false)
-		AudioServer.set_bus_volume_db(master_bus,linear_to_db(value))
+	AudioServer.set_bus_volume_db(bus, linear_to_db(value))
+
+	Settings.master_volume = value
+	Settings.save_settings()
 
 func _on_volume_changer_drag_ended(_value_changed: bool) -> void:
 	$Node2D/MasterChangervolume/MasterAudioTest.play()
@@ -87,13 +103,12 @@ func _on_sfx_changervolume_drag_ended(_value_changed: bool) -> void:
 
 
 func _on_sfx_changervolume_value_changed(value: float) -> void:
-	var SFX_bus = AudioServer.get_bus_index("SFX")
+	var bus = AudioServer.get_bus_index("SFX")
 
-	if value <= 0:
-		AudioServer.set_bus_mute(SFX_bus, true)
-	else:
-		AudioServer.set_bus_mute(SFX_bus, false)
-		AudioServer.set_bus_volume_db(SFX_bus,linear_to_db(value))
+	AudioServer.set_bus_volume_db(bus, linear_to_db(value))
+
+	Settings.sfx_volume = value
+	Settings.save_settings()
 
 
 #MUSIC BUS MANAGER
@@ -102,10 +117,9 @@ func _on_music_changervolume_drag_ended(_value_changed: bool) -> void:
 
 
 func _on_music_changervolume_value_changed(value: float) -> void:
-	var music_bus = AudioServer.get_bus_index("Music")
+	var bus = AudioServer.get_bus_index("Music")
 
-	if value <= 0:
-		AudioServer.set_bus_mute(music_bus, true)
-	else:
-		AudioServer.set_bus_mute(music_bus, false)
-		AudioServer.set_bus_volume_db(music_bus,linear_to_db(value))
+	AudioServer.set_bus_volume_db(bus, linear_to_db(value))
+
+	Settings.music_volume = value
+	Settings.save_settings()
