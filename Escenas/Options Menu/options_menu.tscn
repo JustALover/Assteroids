@@ -1,5 +1,22 @@
 [gd_scene format=3 uid="uid://cs6hph0jsjyxd"]
 
+[ext_resource type="Script" uid="uid://ddmlb865no4f1" path="res://Escenas/Options Menu/options_menu.gd" id="1_4h0tw"]
+[ext_resource type="PackedScene" uid="uid://cgu7fn8hiwomr" path="res://Texturas/Botones/Slider/volume_changer.tscn" id="2_6krbc"]
+[ext_resource type="AudioStream" uid="uid://df1iam52mf4a0" path="res://SFX/Buttons sounds/Hover.wav" id="3_6krbc"]
+[ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="4_hwf73"]
+[ext_resource type="Texture2D" uid="uid://rc4clc8jyyoj" path="res://icon.svg" id="5_xfn3a"]
+[ext_resource type="AudioStream" uid="uid://h2e6lh3eouky" path="res://SFX/Disparo nave/Shootnave.ogg" id="6_xfn3a"]
+[ext_resource type="AudioStream" uid="uid://snou8v2wf7a5" path="res://Music/Musictest.wav" id="7_wwnct"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wwnct"]
+font = ExtResource("4_hwf73")
+font_size = 40
+font_color = Color(0.8984375, 0.87387085, 0.87387085, 1)
+outline_color = Color(0.3254902, 0.13725491, 0.40784314, 1)
+shadow_size = 10
+shadow_color = Color(0.2441864, 0.08242798, 0.5703125, 1)
+shadow_offset = Vector2(5, 3)
+
 [node name="OptionsMenu" type="Control" unique_id=2127039219]
 layout_mode = 3
 anchors_preset = 15
@@ -7,12 +24,137 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4h0tw")
+metadata/_edit_horizontal_guides_ = [285.0, 395.0, 435.0, 545.0]
+metadata/_edit_vertical_guides_ = [126.0]
 
 [node name="CheckBox" type="CheckBox" parent="." unique_id=984409174]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.098000005
-anchor_bottom = 0.043
-offset_right = -22.440002
-offset_bottom = 0.03999901
+anchor_left = 0.418
+anchor_top = 0.046000004
+anchor_right = 0.51600003
+anchor_bottom = 0.089
+offset_left = -0.040039063
+offset_top = -0.12000275
+offset_right = 0.5199585
+offset_bottom = -0.08000183
 text = "FULLSCREEN"
+
+[node name="Button" type="Button" parent="." unique_id=601433709]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.82100004
+anchor_top = 0.157
+anchor_right = 0.82100004
+anchor_bottom = 0.157
+offset_left = -79.880005
+offset_top = -68.04
+offset_right = 80.119995
+offset_bottom = 67.96
+text = "SA"
+icon = ExtResource("5_xfn3a")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1044949490]
+position = Vector2(696, 230)
+
+[node name="MasterChangervolume" parent="Node2D" unique_id=509575808 instance=ExtResource("2_6krbc")]
+anchor_left = 0.72300005
+anchor_top = 0.319
+anchor_right = 0.72300005
+anchor_bottom = 0.41700003
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 458.0
+offset_bottom = 70.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="MasterAudioTest" type="AudioStreamPlayer" parent="Node2D/MasterChangervolume" unique_id=1586930101]
+stream = ExtResource("3_6krbc")
+
+[node name="Label" type="Label" parent="Node2D/MasterChangervolume" unique_id=1557847993]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.67700005
+anchor_top = 0.21400002
+anchor_right = -0.67700005
+anchor_bottom = 0.786
+offset_left = -259.934
+offset_top = 0.01999855
+offset_right = 260.066
+offset_bottom = -0.020000458
+text = "MASTER VOLUME"
+label_settings = SubResource("LabelSettings_wwnct")
+
+[node name="SFXChangervolume" parent="Node2D" unique_id=1398708848 instance=ExtResource("2_6krbc")]
+anchor_left = 0.72300005
+anchor_top = 0.528
+anchor_right = 0.72300005
+anchor_bottom = 0.62600005
+offset_left = 0.0
+offset_top = 151.0
+offset_right = 458.0
+offset_bottom = 221.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SFXAudioTest" type="AudioStreamPlayer" parent="Node2D/SFXChangervolume" unique_id=1158915455]
+stream = ExtResource("6_xfn3a")
+bus = &"SFX"
+
+[node name="Label" type="Label" parent="Node2D/SFXChangervolume" unique_id=1505846432]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.67700005
+anchor_top = 0.21400002
+anchor_right = -0.67700005
+anchor_bottom = 0.786
+offset_left = -259.934
+offset_top = 0.01999855
+offset_right = 260.066
+offset_bottom = -0.020000458
+text = "SFX VOLUME"
+label_settings = SubResource("LabelSettings_wwnct")
+
+[node name="MusicChangervolume" parent="Node2D" unique_id=953175008 instance=ExtResource("2_6krbc")]
+anchor_left = 0.72300005
+anchor_top = 0.739
+anchor_right = 0.72300005
+anchor_bottom = 0.836
+offset_left = 0.0
+offset_top = 302.0
+offset_right = 458.0
+offset_bottom = 372.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="MusicAudioTest" type="AudioStreamPlayer" parent="Node2D/MusicChangervolume" unique_id=1413147207]
+stream = ExtResource("7_wwnct")
+bus = &"Music"
+
+[node name="Label" type="Label" parent="Node2D/MusicChangervolume" unique_id=606355995]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.67700005
+anchor_top = 0.21400002
+anchor_right = -0.67700005
+anchor_bottom = 0.786
+offset_left = -259.934
+offset_top = 0.01999855
+offset_right = 260.066
+offset_bottom = -0.020000458
+text = "MUSIC VOLUME"
+label_settings = SubResource("LabelSettings_wwnct")
+
+[connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="drag_ended" from="Node2D/MasterChangervolume" to="." method="_on_volume_changer_drag_ended"]
+[connection signal="value_changed" from="Node2D/MasterChangervolume" to="." method="_on_volume_changer_value_changed"]
+[connection signal="drag_ended" from="Node2D/SFXChangervolume" to="." method="_on_sfx_changervolume_drag_ended"]
+[connection signal="value_changed" from="Node2D/SFXChangervolume" to="." method="_on_sfx_changervolume_value_changed"]
+[connection signal="drag_ended" from="Node2D/MusicChangervolume" to="." method="_on_music_changervolume_drag_ended"]
+[connection signal="value_changed" from="Node2D/MusicChangervolume" to="." method="_on_music_changervolume_value_changed"]
