@@ -54,8 +54,8 @@ stretch_mode = 6
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=819533223]
 clip_contents = true
-layout_direction = 2
 layout_mode = 2
+layout_direction = 2
 theme_override_constants/separation = 0
 alignment = 1
 
@@ -76,7 +76,7 @@ texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_clr4r")
 theme_override_font_sizes/font_size = 20
-text = "VER.0.5.7"
+text = "VER.1.0.0"
 horizontal_alignment = 2
 vertical_alignment = 2
 

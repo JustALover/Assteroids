@@ -63,6 +63,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_mri4k")
 
 [node name="Panel" type="Panel" parent="." unique_id=1769798149]
@@ -70,6 +72,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel" unique_id=887279677]
 layout_mode = 1
@@ -100,7 +104,7 @@ horizontal_alignment = 1
 
 [node name="ProgrammingName" type="Label" parent="Panel/ScrollContainer/VBoxContainer" unique_id=1012975522]
 layout_mode = 2
-text = "Phoenix"
+text = "Fahikoon"
 label_settings = SubResource("LabelSettings_8w8xf")
 horizontal_alignment = 1
 
@@ -119,7 +123,7 @@ horizontal_alignment = 1
 
 [node name="ArtName" type="Label" parent="Panel/ScrollContainer/VBoxContainer" unique_id=98488621]
 layout_mode = 2
-text = "Phoenix"
+text = "Fahikoon"
 label_settings = SubResource("LabelSettings_8w8xf")
 horizontal_alignment = 1
 
@@ -138,7 +142,7 @@ horizontal_alignment = 1
 
 [node name="SFXSites" type="Label" parent="Panel/ScrollContainer/VBoxContainer" unique_id=903360622]
 layout_mode = 2
-text = "Sites used"
+text = "Pixabay, bfxr.net"
 label_settings = SubResource("LabelSettings_8w8xf")
 horizontal_alignment = 1
 
@@ -157,7 +161,7 @@ horizontal_alignment = 1
 
 [node name="MusicNameOrSites" type="Label" parent="Panel/ScrollContainer/VBoxContainer" unique_id=216815467]
 layout_mode = 2
-text = "Sites used"
+text = "beepbox.co"
 label_settings = SubResource("LabelSettings_8w8xf")
 horizontal_alignment = 1
 
@@ -180,10 +184,14 @@ root_node = NodePath("../../../..")
 libraries/ = SubResource("AnimationLibrary_8w8xf")
 
 [node name="SpecialThanksText" type="Label" parent="Panel/ScrollContainer/VBoxContainer" unique_id=1332510189]
+custom_minimum_size = Vector2(1272, 105)
 layout_mode = 2
-text = "Whatever Thanks"
+text = "Thanks to all the people that believe in me everyday.
+And to the future me: Please, Fuck what everyone says, fuck if everyone do the same, fuck what people say, just do your shit and keep going even if sometimes hurt like hell.
+And if you're going to publish this game for some reason... delete this lol... Or leave it like this to everyone to see... IDK, do whatever you want."
 label_settings = SubResource("LabelSettings_8w8xf")
 horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Separator5" type="Label" parent="Panel/ScrollContainer/VBoxContainer" unique_id=1428635281]
 self_modulate = Color(1, 1, 1, 0)

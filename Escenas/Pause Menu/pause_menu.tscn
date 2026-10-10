@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bmb0na4cqsea" path="res://Texturas/Pause Menu res/PAUSE ICON.png" id="4_fs0pw"]
 [ext_resource type="FontFile" uid="uid://bb7nnqi2gm3qu" path="res://Fonts/Tiny5-Regular.ttf" id="5_1jmmk"]
 [ext_resource type="FontFile" uid="uid://bcg3mmuo8svt8" path="res://Fonts/PressStart2P-Regular.ttf" id="6_qfdtc"]
+[ext_resource type="Texture2D" uid="uid://bun7y1ggmhcsx" path="res://Texturas/Botones/Go back/go back.png" id="7_h86kv"]
 
 [sub_resource type="Animation" id="Animation_icuwt"]
 resource_name = "PRESS ESC FLICK"
@@ -53,7 +54,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8gegd")
-metadata/_edit_vertical_guides_ = [636.0]
 
 [node name="BlackBackground" type="TextureRect" parent="." unique_id=940320070]
 layout_mode = 1
@@ -116,15 +116,34 @@ anchor_left = 0.36600003
 anchor_top = 0.81900007
 anchor_right = 0.63100004
 anchor_bottom = 0.851
-offset_left = -0.4800415
+offset_left = -18.480042
 offset_top = 0.3199463
-offset_right = 0.3199463
+offset_right = 22.319946
 offset_bottom = 0.27996826
 theme_override_fonts/font = ExtResource("6_qfdtc")
 theme_override_font_sizes/font_size = 20
-text = "PRESS ESC TO PLAY"
+text = "PRESS ESC TO RESUME"
 horizontal_alignment = 1
 
 [node name="PressEscToPlayAnim" type="AnimationPlayer" parent="." unique_id=39482181]
 root_node = NodePath("../PressEscToPlayLabel")
 libraries/ = SubResource("AnimationLibrary_533sx")
+
+[node name="Button" type="Button" parent="." unique_id=1558012820]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.90500003
+anchor_top = 0.068
+anchor_right = 0.90500003
+anchor_bottom = 0.21800001
+offset_left = -49.573364
+offset_top = 0.24399567
+offset_right = 60.426636
+offset_bottom = 0.24398804
+pivot_offset = Vector2(57.17334, 51.796)
+icon = ExtResource("7_h86kv")
+flat = true
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

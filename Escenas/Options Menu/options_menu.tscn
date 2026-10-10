@@ -92,6 +92,7 @@ offset_left = -54.400024
 offset_top = 0.0399971
 offset_right = 55.599976
 offset_bottom = 0.039993286
+pivot_offset = Vector2(58, 53)
 icon = ExtResource("6_1rvlo")
 flat = true
 
@@ -191,6 +192,8 @@ text = "MUSIC VOLUME"
 label_settings = SubResource("LabelSettings_wwnct")
 
 [connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="drag_ended" from="Node2D/MasterChangervolume" to="." method="_on_volume_changer_drag_ended"]
 [connection signal="value_changed" from="Node2D/MasterChangervolume" to="." method="_on_volume_changer_value_changed"]

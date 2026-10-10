@@ -12,8 +12,13 @@ config_version=5
 
 config/name="ASSteroids"
 run/main_scene="uid://b25orbgb57x5e"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/stretch_mode=0
+boot_splash/use_filter=false
+boot_splash/image="uid://c36dukefb1bca"
 config/icon="uid://d3ivwjxu7fxrb"
+boot_splash/minimum_display_time=50
 
 [audio]
 

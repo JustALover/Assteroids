@@ -123,3 +123,10 @@ func _on_music_changervolume_value_changed(value: float) -> void:
 
 	Settings.music_volume = value
 	Settings.save_settings()
+
+
+func _on_button_mouse_entered() -> void:
+	$Button.scale = Vector2(1.1,1.1)
+
+func _on_button_mouse_exited() -> void:
+	$Button.scale = Vector2(1.0,1.0)
