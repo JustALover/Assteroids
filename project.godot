@@ -16,9 +16,9 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/stretch_mode=0
 boot_splash/use_filter=false
-boot_splash/image="uid://c36dukefb1bca"
+boot_splash/image="uid://mwnxqwtglduy"
 config/icon="uid://d3ivwjxu7fxrb"
-boot_splash/minimum_display_time=50
+boot_splash/minimum_display_time=100
 
 [audio]
 

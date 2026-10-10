@@ -104,7 +104,7 @@ horizontal_alignment = 1
 
 [node name="ProgrammingName" type="Label" parent="Panel/ScrollContainer/VBoxContainer" unique_id=1012975522]
 layout_mode = 2
-text = "Fahikoon"
+text = "Fahim Florez"
 label_settings = SubResource("LabelSettings_8w8xf")
 horizontal_alignment = 1
 
@@ -123,7 +123,7 @@ horizontal_alignment = 1
 
 [node name="ArtName" type="Label" parent="Panel/ScrollContainer/VBoxContainer" unique_id=98488621]
 layout_mode = 2
-text = "Fahikoon"
+text = "Fahim Florez"
 label_settings = SubResource("LabelSettings_8w8xf")
 horizontal_alignment = 1
 
